@@ -10,7 +10,7 @@ This project was developed using React.js, JavaScript, HTML5, and CSS3, followin
 
 
 ##  Project Structure
-
+```text
 gmail-editor/
 │
 ├── src/
@@ -29,6 +29,9 @@ gmail-editor/
 ├── package-lock.json
 ├── .gitignore
 └── README.md
+```
+
+---
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
