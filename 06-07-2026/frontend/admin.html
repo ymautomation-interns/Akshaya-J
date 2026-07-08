@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header>
+      <h1>Admin Panel</h1>
+      <button id="logoutBtn">Logout</button>
+    </header>
+
+    <section class="stats-grid">
+      <div class="stat-card"><h3>Total Students</h3><p id="studentCount">0</p></div>
+      <div class="stat-card"><h3>Admin Actions</h3><p>Create, edit, delete</p></div>
+      <div class="stat-card"><h3>View Modes</h3><p>Table and card</p></div>
+      <div class="stat-card"><h3>Settings</h3><p>CRUD operations enabled</p></div>
+    </section>
+
+    <section class="panel-grid">
+      <div class="card form-card">
+        <h2 id="formTitle">Add Student</h2>
+        <form id="studentForm">
+          <input type="hidden" id="studentId" />
+          <input type="text" id="name" placeholder="Name" required />
+          <input type="email" id="email" placeholder="Email" required />
+          <input type="text" id="phone" placeholder="Phone" />
+          <input type="text" id="department" placeholder="Department" />
+          <input type="text" id="course" placeholder="Course" />
+          <input type="number" id="age" placeholder="Age" />
+          <textarea id="address" placeholder="Address"></textarea>
+          <button type="submit">Save Student</button>
+          <button type="button" id="cancelEdit" class="secondary">Cancel</button>
+        </form>
+      </div>
+
+      <div class="card list-card">
+        <div class="toolbar">
+          <h2>Students</h2>
+          <div>
+            <button id="tableViewBtn" class="active">Table View</button>
+            <button id="cardViewBtn">Card View</button>
+          </div>
+        </div>
+        <div id="studentTable"></div>
+      </div>
+    </section>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

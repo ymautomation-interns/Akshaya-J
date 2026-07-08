@@ -1,0 +1,92 @@
+/* Main Container */
+.editor-container {
+  width: 750px;
+  margin: 40px auto;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+
+  /* Center the compose box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+
+  /* Light blue background */
+  background: linear-gradient(135deg, #dbeafe, #eef6ff, #ffffff);
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+.toolbar {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Buttons */
+.toolbar button {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.toolbar button:hover {
+  background: #e8f0fe;
+  transform: translateY(-2px);
+}
+
+.toolbar button:active {
+  transform: scale(0.95);
+}
+
+.editor {
+  min-height: 320px;
+  padding: 18px;
+  font-size: 16px;
+  line-height: 1.7;
+  outline: none;
+  background: white;
+}
+
+
+.editor:empty:before {
+  content: "Type your email here...";
+  color: #999;
+}
+
+
+.editor::-webkit-scrollbar {
+  width: 8px;
+}
+
+.editor::-webkit-scrollbar-thumb {
+  background: #cfcfcf;
+  border-radius: 10px;
+}
