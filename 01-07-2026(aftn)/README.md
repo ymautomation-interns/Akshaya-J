@@ -1,6 +1,6 @@
-Gmail Editor Demo
+# Gmail Editor Demo
 
-#Project Overview
+## Project Overview
 
 The Gmail Editor Demo is a React.js application developed to replicate the core text editing capabilities of Gmail's compose window. The project provides an interactive rich text editor that enables users to format content efficiently using a variety of editing tools. It demonstrates the implementation of modern text editing features while maintaining a clean, responsive, and user-friendly interface.
 
