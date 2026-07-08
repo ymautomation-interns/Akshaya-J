@@ -7,6 +7,28 @@ The Gmail Editor Demo is a React.js application developed to replicate the core 
 The editor includes essential formatting options such as Bold, Italic, Underline, Font Family, Font Size, Text Color, Text Alignment, Ordered and Unordered Lists, Hyperlink Insertion, Undo, Redo, and Clear Formatting. The application is designed to provide a seamless editing experience similar to professional email editors.
 
 This project was developed using React.js, JavaScript, HTML5, and CSS3, following a component-based architecture for better code organization, maintainability, and scalability. It serves as a practical demonstration of building a customizable rich text editor using modern frontend technologies.
+
+
+##  Project Structure
+
+gmail-editor/
+│
+├── src/
+│   ├── App.js
+│   ├── App.css
+│   ├── RichTextEditor.js
+│   ├── RichTextEditor.css
+│   ├── index.js
+│   ├── index.css
+│   ├── App.test.js
+│   ├── reportWebVitals.js
+│   ├── setupTests.js
+│   └── logo.svg
+│
+├── package.json
+├── package-lock.json
+├── .gitignore
+└── README.md
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
