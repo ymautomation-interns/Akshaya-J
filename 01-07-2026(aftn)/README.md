@@ -31,3 +31,8 @@ gmail-editor/
 └── README.md
 ```
 
+## Technologies Used
+
+- React.js
+- JavaScript
+- CSS3
