@@ -1,0 +1,99 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#eef4ff;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    padding:40px;
+}
+
+.container h1{
+    text-align:center;
+    color:#1e293b;
+    font-size:40px;
+}
+
+.container p{
+    text-align:center;
+    color:#64748b;
+    margin-top:10px;
+    margin-bottom:35px;
+}
+
+.employee-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 35px rgba(0,0,0,.18);
+}
+
+.avatar{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    background:#2563eb;
+    color:white;
+    font-size:34px;
+    font-weight:bold;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    margin-bottom:18px;
+}
+
+.card h2{
+    color:#1e293b;
+}
+
+.department{
+    color:#2563eb;
+    font-weight:600;
+    margin:12px 0;
+}
+
+.status-section{
+    margin-top:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    font-size:16px;
+}
+
+.active{
+    background:#dcfce7;
+    color:#15803d;
+    padding:8px 16px;
+    border-radius:30px;
+    font-weight:600;
+}
+
+.inactive{
+    background:#fee2e2;
+    color:#dc2626;
+    padding:8px 16px;
+    border-radius:30px;
+    font-weight:600;
+}

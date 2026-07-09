@@ -1,0 +1,72 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.card{
+    width:330px;
+    background:#ffffff;
+    border-radius:18px;
+    padding:22px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.12);
+    transition:0.3s;
+    border-top:5px solid #2563eb;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.18);
+}
+
+.card-header{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.avatar{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#2563eb;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.card-header h2{
+    color:#222;
+    font-size:22px;
+}
+
+.emp-id{
+    color:gray;
+    margin-top:5px;
+}
+
+.card-body{
+    display:flex;
+    justify-content:space-between;
+}
+
+.info{
+    display:flex;
+    flex-direction:column;
+}
+
+.info span{
+    color:#777;
+    font-size:14px;
+}
+
+.info strong{
+    color:#111;
+    margin-top:6px;
+    font-size:17px;
+}

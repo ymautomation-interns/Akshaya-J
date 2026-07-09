@@ -1,0 +1,125 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    overflow:hidden;
+}
+
+/* Full Screen */
+
+.container{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transition:0.5s ease;
+}
+
+/* Light Theme */
+
+.light{
+    background:linear-gradient(135deg,#EEF2FF,#DBEAFE,#BFDBFE);
+}
+
+/* Dark Theme */
+
+.dark{
+    background:linear-gradient(135deg,#020617,#0F172A,#1E293B);
+}
+
+/* Card */
+
+.card{
+    width:430px;
+    padding:45px 35px;
+    border-radius:25px;
+    text-align:center;
+    backdrop-filter:blur(18px);
+    background:rgba(255,255,255,0.20);
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+    transition:0.5s;
+}
+
+.dark .card{
+    background:rgba(30,41,59,.55);
+}
+
+/* Icon */
+
+.icon{
+    font-size:85px;
+    margin-bottom:20px;
+    line-height:1;
+}
+
+/* Heading */
+
+h1{
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.light h1{
+    color:#111827;
+}
+
+.dark h1{
+    color:white;
+}
+
+/* Paragraph */
+
+p{
+    font-size:17px;
+    line-height:1.6;
+    margin-bottom:35px;
+}
+
+.light p{
+    color:#4B5563;
+}
+
+.dark p{
+    color:#D1D5DB;
+}
+
+/* Button */
+
+button{
+    border:none;
+    outline:none;
+    padding:15px 28px;
+    border-radius:50px;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.light button{
+    background:#2563EB;
+    color:white;
+}
+
+.light button:hover{
+    background:#1D4ED8;
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(37,99,235,.35);
+}
+
+.dark button{
+    background:#FACC15;
+    color:#111827;
+}
+
+.dark button:hover{
+    background:#FDE047;
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(250,204,21,.35);
+}
