@@ -5,7 +5,7 @@ This repository contains beginner-level React projects created as part of my int
 ## Topics Covered
 
 - Components
-- Props
+- Props 
 - useState
 - useEffect
 - Event Handling
