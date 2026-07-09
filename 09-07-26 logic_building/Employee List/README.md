@@ -1,16 +1,79 @@
-# React + Vite
+This repository contains beginner-level React projects created as part of my internship to strengthen React fundamentals.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Topics Covered
 
-Currently, two official plugins are available:
+- Components
+- Props
+- useState
+- useEffect
+- Event Handling
+- Conditional Rendering
+- Forms
+- Controlled Components
+- Arrays
+- map()
+- filter()
+- Reusable Components
+- API Fetching
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Projects
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Employee Card using Props
+- Display employee details using props.
+- Demonstrates component communication.
 
-## Expanding the ESLint configuration
+### 2. Counter using useState
+- Increment
+- Decrement
+- Reset
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 3. Login Form with Validation
+- Email validation
+- Password validation
+- Error messages
+- Controlled Components
+
+### 4. Theme Toggle
+- Light Mode
+- Dark Mode
+- Conditional Styling using useState
+
+### 5. Todo App
+Features:
+- Add Task
+- Delete Task
+- Mark as Complete
+- Dynamic Rendering
+
+### 6. Employee List using map()
+- Display employee details from an array.
+- Uses React map().
+
+### 7. Search Filter
+- Search employees by name.
+- Uses filter() and useState.
+
+### 8. Conditional Rendering
+- Active/Inactive Status Badge.
+- Uses ternary operator.
+
+### 9. Reusable Components
+Reusable:
+- Button Component
+- Input Component
+
+### 10. Fetch Users using useEffect
+- Fetch data from JSONPlaceholder API.
+- Display Name, Email and Phone.
+
+---
+
+## Technologies Used
+
+- React.js
+- Vite
+- JavaScript (
+- HTML5
+- CSS3
