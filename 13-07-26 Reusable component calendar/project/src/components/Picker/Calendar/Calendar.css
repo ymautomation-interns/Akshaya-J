@@ -1,0 +1,176 @@
+/* src/components/Picker/Calendar/Calendar.css */
+
+.calendar {
+  width: 320px;
+  padding: 20px 20px 16px;
+  background: var(--rd-paper);
+  font-family: var(--rd-font-body);
+}
+
+/* ---------- Header ---------- */
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.calendar-header__selectors {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+/* Month: plain display label (no dropdown) — stepped only via the
+   Prev/Next arrows on either side of the header. This is the
+   headline of the calendar, set in the serif display face; the year
+   is just supporting detail next to it. */
+.calendar-header__month-label {
+  font-family: var(--rd-font-display);
+  font-style: italic;
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--rd-emerald-deep);
+  padding: 4px 2px;
+}
+
+.calendar-header__nav-btn {
+  width: 30px;
+  height: 30px;
+  border: 1.5px solid var(--rd-paper-line);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--rd-emerald-deep);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+  flex-shrink: 0;
+}
+
+.calendar-header__nav-btn:hover {
+  background: var(--rd-emerald-tint);
+  border-color: var(--rd-emerald);
+}
+
+.calendar-header__nav-btn:active {
+  transform: scale(0.92);
+}
+
+/* ---------- Weekdays ---------- */
+
+.week-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 8px;
+  border-bottom: 1px dashed var(--rd-paper-line);
+  padding-bottom: 8px;
+}
+
+.week-days__cell {
+  text-align: center;
+  font-family: var(--rd-font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  color: var(--rd-brass-dark);
+  padding: 2px 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ---------- Grid ---------- */
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+/* ---------- Day Cell ---------- */
+
+.day-cell {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  font-family: var(--rd-font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--rd-text);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.08s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.day-cell:hover {
+  background: var(--rd-emerald-tint);
+  color: var(--rd-emerald-deep);
+}
+
+.day-cell:active {
+  transform: scale(0.92);
+}
+
+.day-cell--muted {
+  color: var(--rd-paper-line);
+}
+
+.day-cell--muted:hover {
+  background: transparent;
+  color: var(--rd-paper-line);
+}
+
+/* today: a small brass dot underneath the number, ledger-stamp style */
+.day-cell--today {
+  font-weight: 700;
+  color: var(--rd-brass-dark);
+}
+
+.day-cell--today::after {
+  content: "";
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--rd-brass);
+  transform: translateX(-50%);
+}
+
+.day-cell--in-range {
+  background: var(--rd-emerald-tint);
+  border-radius: 0;
+}
+
+.day-cell--selected {
+  background: var(--rd-emerald);
+  color: var(--rd-on-emerald);
+  font-weight: 700;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--rd-paper), 0 0 0 4.5px var(--rd-brass);
+}
+
+.day-cell--selected::after {
+  display: none;
+}
+
+.day-cell--selected.day-cell--muted {
+  color: var(--rd-on-emerald);
+}
+
+.day-cell--disabled {
+  color: var(--rd-paper-line);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.day-cell--disabled::after {
+  display: none;
+}

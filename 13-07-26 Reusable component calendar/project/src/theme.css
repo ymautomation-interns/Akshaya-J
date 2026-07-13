@@ -1,0 +1,41 @@
+/* src/theme.css
+ * ----------------------------------------------------------------
+ * "Reservation Desk" design tokens.
+ * A concierge ledger/ticket aesthetic: deep emerald ink, warm
+ * cardstock paper, and brass hardware — built for a picker that's
+ * meant to feel like a booking desk, not a generic SaaS dropdown.
+ * ---------------------------------------------------------------- */
+
+:root {
+  /* ink */
+  --rd-ink-950: #0b211c;
+  --rd-ink-800: #123830;
+  --rd-ink-700: #1a4a3f;
+
+  /* paper */
+  --rd-paper: #fbf6ea;
+  --rd-paper-dim: #f1e8d3;
+  --rd-paper-line: #e7dcc0;
+
+  /* brass + emerald accents */
+  --rd-emerald: #1f6f5c;
+  --rd-emerald-deep: #0e4a3c;
+  --rd-emerald-tint: #e3efe9;
+  --rd-brass: #c89b5c;
+  --rd-brass-dark: #a97f45;
+  --rd-brass-tint: #f4e9d6;
+
+  /* text */
+  --rd-text: #1c2b27;
+  --rd-muted: #74857f;
+  --rd-on-emerald: #fbf6ea;
+
+  /* type */
+  --rd-font-display: "Fraunces", "Iowan Old Style", ui-serif, serif;
+  --rd-font-body: "Manrope", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --rd-font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* elevation */
+  --rd-shadow-card: 0 24px 48px rgba(11, 33, 28, 0.28), 0 4px 14px rgba(11, 33, 28, 0.14);
+  --rd-shadow-soft: 0 10px 24px rgba(11, 33, 28, 0.14);
+}

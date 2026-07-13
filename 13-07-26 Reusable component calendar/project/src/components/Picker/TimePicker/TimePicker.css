@@ -1,0 +1,105 @@
+/* src/components/Picker/TimePicker/TimePicker.css */
+
+.time-picker {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 22px 20px 20px;
+  background: var(--rd-paper);
+  font-family: var(--rd-font-body);
+}
+
+.time-picker__separator {
+  font-family: var(--rd-font-display);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--rd-brass);
+  align-self: center;
+  margin-top: 30px;
+}
+
+/* ---------- Column (stepper) ---------- */
+
+.time-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 74px;
+}
+
+.time-column__label {
+  font-family: var(--rd-font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--rd-brass-dark);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Box: ONE bordered container with the value on the left and the
+   up/down chevrons stacked as a compact stepper on the right side —
+   inside the same box, not above/below it. */
+.time-column__box {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background: var(--rd-paper-dim);
+  border: 1.5px solid var(--rd-paper-line);
+  border-radius: 9px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  overflow: hidden;
+}
+
+.time-column__box:focus-within {
+  border-color: var(--rd-emerald);
+  box-shadow: 0 0 0 3px var(--rd-emerald-tint);
+}
+
+.time-column__steps {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px dashed var(--rd-paper-line);
+  flex-shrink: 0;
+}
+
+.time-column__step {
+  width: 26px;
+  height: 21px;
+  border: none;
+  background: transparent;
+  color: var(--rd-emerald-deep);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.08s ease;
+}
+
+.time-column__step--up {
+  border-bottom: 1px dashed var(--rd-paper-line);
+}
+
+.time-column__step:hover {
+  background: var(--rd-emerald-tint);
+}
+
+.time-column__step:active {
+  transform: scale(0.9);
+}
+
+.time-column__input {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+  font-family: var(--rd-font-mono);
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--rd-text);
+  background: transparent;
+  border: none;
+  padding: 10px 0;
+  outline: none;
+}

@@ -1,0 +1,122 @@
+/* src/App.css */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at top, #133b32 0%, var(--rd-ink-950) 62%);
+  min-height: 100vh;
+}
+
+.app {
+  font-family: var(--rd-font-body);
+  padding: 72px 24px;
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.app__frame {
+  position: relative;
+  width: 100%;
+  background: var(--rd-paper);
+  border-radius: 4px;
+  padding: 48px 44px 44px;
+  box-shadow: var(--rd-shadow-card);
+}
+
+/* brass corner brackets, like a passport-photo mount */
+.app__corner {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border: 2.5px solid var(--rd-brass);
+}
+
+.app__corner--tl {
+  top: 12px;
+  left: 12px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.app__corner--tr {
+  top: 12px;
+  right: 12px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.app__corner--bl {
+  bottom: 12px;
+  left: 12px;
+  border-right: none;
+  border-top: none;
+}
+
+.app__corner--br {
+  bottom: 12px;
+  right: 12px;
+  border-left: none;
+  border-top: none;
+}
+
+.app__eyebrow {
+  font-family: var(--rd-font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--rd-brass-dark);
+  margin: 0 0 14px;
+}
+
+.app__title {
+  font-family: var(--rd-font-display);
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--rd-ink-950);
+  margin: 0 0 14px;
+  letter-spacing: -0.01em;
+}
+
+.app__title em {
+  color: var(--rd-emerald);
+  font-style: italic;
+}
+
+.app__subtitle {
+  color: var(--rd-muted);
+  margin: 0 0 32px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+.app__subtitle code {
+  background: var(--rd-emerald-tint);
+  padding: 2px 6px;
+  border-radius: 5px;
+  color: var(--rd-emerald-deep);
+  font-family: var(--rd-font-mono);
+  font-size: 13px;
+}
+
+.app__stage {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (max-width: 560px) {
+  .app__frame {
+    padding: 40px 22px 34px;
+  }
+
+  .app__title {
+    font-size: 27px;
+  }
+}
