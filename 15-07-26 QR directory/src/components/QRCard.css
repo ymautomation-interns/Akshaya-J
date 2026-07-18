@@ -1,0 +1,128 @@
+.qr-card {
+  position: relative;
+  max-width: 360px;
+  margin: 24px auto 0;
+  padding: 28px 28px 24px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: var(--shadow-glow);
+  text-align: center;
+  overflow: hidden;
+}
+
+.qr-card__glow {
+  position: absolute;
+  inset: -40% -40% auto -40%;
+  height: 220px;
+  background: var(--gradient-glow);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.qr-card__notch {
+  position: absolute;
+  top: 96px;
+  width: 26px;
+  height: 26px;
+  background: var(--color-bg);
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  z-index: 2;
+}
+.qr-card__notch--left { left: -13px; }
+.qr-card__notch--right { right: -13px; }
+
+.qr-card__header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.qr-card__eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+}
+
+.qr-card__code {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  padding: 18px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: var(--shadow-sm);
+  animation: scaleIn var(--dur-slow) var(--ease-out);
+}
+
+.qr-card__name {
+  position: relative;
+  z-index: 1;
+  margin-top: 18px;
+  font-size: 18px;
+}
+
+.qr-card__id {
+  position: relative;
+  z-index: 1;
+  color: var(--color-royal-dark);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin-top: 3px;
+}
+
+.qr-card__role {
+  position: relative;
+  z-index: 1;
+  color: var(--color-text-muted);
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.qr-card__perforation {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px -28px 18px;
+  padding: 0 6px;
+}
+.qr-card__perforation span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-border);
+}
+
+.qr-card__actions {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.qr-card__actions .btn {
+  padding: 10px 8px;
+  font-size: 12.5px;
+  gap: 6px;
+}
+
+@media (max-width: 420px) {
+  .qr-card__actions {
+    grid-template-columns: 1fr 1fr;
+  }
+  .qr-card__actions .btn:last-child {
+    grid-column: span 2;
+  }
+}

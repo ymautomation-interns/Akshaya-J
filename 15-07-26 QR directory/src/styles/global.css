@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* Color tokens */
+  --color-bg: #F4F6FB;
+  --color-surface: #FFFFFF;
+  --color-royal: #2F5FF3;
+  --color-royal-dark: #1E3FD1;
+  --color-royal-light: #E8EDFE;
+  --color-purple: #8B7CF6;
+  --color-purple-soft: #C9BFFB;
+  --color-text: #12162B;
+  --color-text-muted: #6B7280;
+  --color-text-faint: #9AA1B4;
+  --color-border: rgba(47, 95, 243, 0.12);
+  --color-success: #12B76A;
+  --color-success-bg: #E7F9F0;
+  --color-warning: #F79009;
+  --color-warning-bg: #FEF3E2;
+  --color-danger: #F04438;
+  --color-danger-bg: #FDECEA;
+
+  /* Gradients */
+  --gradient-hero: linear-gradient(135deg, #1E3FD1 0%, #2F5FF3 45%, #8B7CF6 100%);
+  --gradient-accent: linear-gradient(120deg, #2F5FF3, #8B7CF6);
+  --gradient-glow: radial-gradient(circle at 20% 20%, rgba(139, 124, 246, 0.35), transparent 60%);
+
+  /* Typography */
+  --font-display: 'Sora', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+
+  /* Radii & shadows */
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 24px;
+  --shadow-sm: 0 1px 2px rgba(18, 22, 43, 0.06), 0 1px 3px rgba(18, 22, 43, 0.04);
+  --shadow-md: 0 8px 24px rgba(30, 40, 90, 0.08);
+  --shadow-lg: 0 20px 50px rgba(30, 40, 90, 0.14);
+  --shadow-glow: 0 0 0 1px rgba(139, 124, 246, 0.15), 0 20px 60px rgba(47, 95, 243, 0.18);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 150ms;
+  --dur-med: 280ms;
+  --dur-slow: 480ms;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  background-image:
+    radial-gradient(circle at 8% 0%, rgba(47, 95, 243, 0.06), transparent 45%),
+    radial-gradient(circle at 100% 8%, rgba(139, 124, 246, 0.08), transparent 40%);
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+/* Focus ring for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-royal);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Shared animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.94); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.fade-in {
+  animation: fadeIn var(--dur-med) var(--ease-out) both;
+}
+
+.scale-in {
+  animation: scaleIn var(--dur-med) var(--ease-out) both;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(47, 95, 243, 0.18);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(47, 95, 243, 0.32);
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.app-shell main {
+  flex: 1;
+}
+
+/* Optional dark mode (toggle in navbar) */
+html.dark body {
+  --color-bg: #0B0E1A;
+  --color-surface: #131729;
+  --color-text: #F2F4FA;
+  --color-text-muted: #A0A6BD;
+  --color-text-faint: #6D7390;
+  --color-border: rgba(139, 124, 246, 0.18);
+  --color-royal-light: rgba(47, 95, 243, 0.16);
+  background-image:
+    radial-gradient(circle at 8% 0%, rgba(47, 95, 243, 0.12), transparent 45%),
+    radial-gradient(circle at 100% 8%, rgba(139, 124, 246, 0.12), transparent 40%);
+}
+html.dark .navbar {
+  background: rgba(11, 14, 26, 0.78);
+}
+html.dark .navbar__theme-toggle,
+html.dark .search-bar__clear {
+  background: var(--color-surface);
+}
+html.dark .qr-card {
+  background: rgba(19, 23, 41, 0.72);
+  border-color: rgba(139, 124, 246, 0.2);
+}
+html.dark .qr-card__notch {
+  background: var(--color-bg);
+}
+html.dark .search-section__card {
+  background: rgba(19, 23, 41, 0.82);
+}
