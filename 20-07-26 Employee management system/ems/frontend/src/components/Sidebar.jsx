@@ -28,7 +28,7 @@ const Sidebar = ({ collapsed, setCollapsed, mobileOpen, setMobileOpen }) => {
           {!collapsed && (
             <div className="min-w-0">
               <p className="font-display font-bold text-white leading-tight whitespace-nowrap">
-                EMS<span className="text-primary-400"></span>
+                Nimbus <span className="text-primary-400">HR</span>
               </p>
               <p className="text-[10px] uppercase tracking-wider text-ink-muted whitespace-nowrap">
                 Operations Console
